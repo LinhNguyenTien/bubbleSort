@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bubble Sort</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sono:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link href="css/templatemo-pod-talk.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/sorting.css">
+    <!--Favicon-->
+    <link href="./images/logo.png" rel="shortcut icon" type="image/x-icon">
+    </link>
+</head>
+
+<body>
+    <header class="container">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand me-lg-5 me-0" href="index.html">
+                    <img src="./images/logo.png" class="logo-image img-fluid" alt="templatemo pod talk">
+                </a>
+                <div class="border border-1 rounded bg-white w-auto h-25" id="navbarNav">
+                    <div class="px-2">Full name: Nguyen Tien Linh</div>
+                    <div class="px-2">Student ID: B2012108</div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Start tutorial modal section-->
+    <div id="tutorial">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+            id="question">
+            <i class="fs-4 fa fa-question"></i>
+        </button>
+        <p class="text-center text-warning fw-bold" id="help">Help</p>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade py-5" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-success" id="staticBackdropLabel">Tutorial</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <a class="title fw-bold" data-bs-toggle="collapse" href="#question1" role="button"
+                        aria-expanded="false" aria-controls="question1">1. What could this site help me?</a>
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="question1">
+                            <div class="card card-body">
+                                <p>I am a website created by Nguyen Tien Linh from CICT, CTU. I am here to help you to
+                                    learn about the Bubble Sort algorithm. I have some functions that you may like:
+                                </p>
+                                <ul>
+                                    <li>Enter an integer or an integer string.</li>
+                                    <li>Adjust the speed of algorithm implementation.</li>
+                                    <li>Perform step-by-step of the algorithm.</li>
+                                    <li>The data table records the arrangement process.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <br class="py-2">
+                    <a class="title fw-bold" data-bs-toggle="collapse" href="#question2" role="button"
+                        aria-expanded="false" aria-controls="question2">2. How can I add a number?</a>
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="question2">
+                            <div class="card card-body">
+                                <p>You can add a number for arrangement by many ways:</p>
+                                <ul>
+                                    <li>The first way that you can add a number is enter a number then press the "Add"
+                                        button on the below section:
+                                        <img class="question2img" src="./images/addNumber.png">
+                                    </li>
+                                    <li>An other way, you can enter a number string then press the "Add" button on the
+                                        below section. However, make sure your string does not violate the following
+                                        rules:
+                                        <ul>
+                                            <li>It is not empty.</li>
+                                            <li>It consists of numbers with no more than 30</li>
+                                            <li>The numbers are separated by the character "," and end with a number.
+                                            </li>
+                                            <li>If the number of elements participating in the arrangement is too much,
+                                                I will only take it until 10.</li>
+                                        </ul>
+                                        <img class="question2img" src="./images/addNumberString.png">
+                                    </li>
+                                    <li>The final way is to import a file. Let the control bar then press the "Enter"
+                                        button. Now, you should choose an input file containing a string. Similar to the
+                                        second way, it must satisfy the above constraints.
+                                        <img class="question2img" src="./images/controlBar.png">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <br class="py-2">
+                    <a class="title fw-bold" data-bs-toggle="collapse" href="#question3" role="button"
+                        aria-expanded="false" aria-controls="question3">3. Can I adjust the speed of
+                        algorithm?</a>
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="question3">
+                            <div class="card card-body">
+                                Yes, you can. Let's see the "Speed" section with three buttons "0.5x", "1x", and "2x".
+                                Press one of them to adjust the speed of the implementation.
+                                <img src="./images/speed.png">
+                            </div>
+                        </div>
+                    </div>
+                    <br class="py-2">
+                    <a class="title fw-bold" data-bs-toggle="collapse" href="#question4" role="button"
+                        aria-expanded="false" aria-controls="question4">4. What are the yellow buttons?</a>
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="question4">
+                            <div class="card card-body">
+                                They are the buttons to control the implementation algorithm. I will complaint about them:
+                                <img src="./images/controlBar.png">
+                                <ul>
+                                    <li><b>Sort</b> - when click on the "Sort" button, then the algorithm will start.</li>
+                                    <li><b>Clear</b> - it removes all the bubbles on the screen.</li>
+                                    <li><b>Random</b> - it is similar to the "Clear" button then it recreates new bubbles.</li>
+                                    <li><b>Pause</b> - of course, it pauses the implementation and becomes the "Continue" button. You just press it to continue.</li>
+                                    <li><b>Import</b> - as you know, it imports a file from your device.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <br class="py-2">
+                    <a class="title fw-bold" data-bs-toggle="collapse" href="#question5" role="button"
+                        aria-expanded="false" aria-controls="question5">5. How can I view the data
+                        table?</a>
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="question5">
+                            <div class="card card-body">
+                                <p>Just click on this item <img class="d-inline-block" width="30px" height="30px" src="./images/dataTableButton.png"> then a data table will apprear. It consists of the array after each sorting.</p>
+                                <img src="./images/dataTable.png">
+                                <p>Press this <img class="d-inline-block" width="30px" height="30px" src="./images/closeDataTable.png"> item to close the data table</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End tutorial modal section-->
+    <main class="container mt-4">
+        <div id="content-wrapper mt-3" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <!-- Content Row -->
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6 col-6 mb-4">
+                            <div class="card border-left-primary shadow h-100">
+                                <div class="card-body pt-4">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs fw-bold text-primary text-uppercase mb-3">
+                                                Add a number</div>
+                                            <div class="h5 mb-0 font-weight-bold text-white">
+                                                <form action="#" name="frm-add-number" onsubmit="return addNumber()">
+                                                    <input type="number" id="getNumber" class="w-50" name="getNumber" min="1"
+                                                        max="30">
+                                                    <button class="btn-submit btn-primary btn text-white"
+                                                        id="btnSubmitNumber" type="submit">Add</button>
+                                                </form>
+                                                <span class="text-danger" style="font-size: 15px" id="warning1"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-6 mb-4">
+                            <div class="card border-left-success shadow h-100">
+                                <div class="card-body pt-4">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs fw-bold text-success text-uppercase mb-3"
+                                                style="width: 198px;">
+                                                Add a string</div>
+                                            <div class="h5 mb-0 font-weight-bold text-white">
+                                                <form action="#" onsubmit="return addString()" name="frm-add-string">
+                                                    <input type="text" name="getString" id="getString" class="w-50"
+                                                        placeholder="1,2,3,4,5">
+                                                    <button class="btn-submit btn-success btn text-white"
+                                                        type="submit">Add</button>
+                                                </form>
+                                                <span id="warning2" style="font-size: 15px" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 col-6 mb-4">
+                            <div class="card border-left-info shadow h-100">
+                                <div class="card-body pt-4">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs fw-bold text-info text-uppercase mb-3">Speed
+                                            </div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col h-100 d-flex justify-content-between">
+                                                    <button class="btn btn-info btn-submit px-1 px-xl-3" id="Half">0.5x</button>
+                                                    <button class="btn btn-info btn-submit px-1 px-xl-3" id="OneHundred">1x</button>
+                                                    <button class="btn btn-info btn-submit px-1 px-xl-3" id="TwoHundred">2x</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 col-6 mb-4">
+                            <div class="card border-left-warning shadow h-100">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs fw-bold text-warning text-uppercase mb-1">
+                                                Control bar</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                <form action="#" name="frm-control">
+                                                    <button type="button" id="sorting"
+                                                        class="btn btn-warning btn-submit text-white px-1">Sort</button>
+                                                    <button type="button" id="clearing"
+                                                        class="btn btn-warning btn-submit text-white px-1">Clear</button>
+                                                    <button type="button" id="random"
+                                                        class="btn btn-warning btn-submit text-white px-1">Random</button>
+                                                    <button type="button" id="paucon"
+                                                        class="btn btn-warning btn-submit text-white px-1">Pause</button>
+                                                    <button type="button" id="importing"
+                                                        class="btn btn-warning btn-submit text-white px-1">Import</button>
+                                                </form>
+                                                <span id="warning4" style="font-size: 15px" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Row -->
+
+                    <div class="row">
+
+                        <!-- Area Chart -->
+                        <div class="col-xl-7 col-lg-7">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <button class="btn btn-primary" id="prestep">Previous step</button>
+                                    <h6 class="m-0 font-weight-bold text-primary">Bubble Sort</h6>
+                                    <button class="btn btn-primary" id="nextstep">Next step</button>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body p-0">
+                                    <div class="chart-area">
+                                        <div class="chartjs-size-monitor">
+                                            <div class="chartjs-size-monitor-expand">
+                                                <div class=""></div>
+                                            </div>
+                                            <div class="chartjs-size-monitor-shrink">
+                                                <div class=""></div>
+                                            </div>
+                                        </div>
+                                        <div id="board" class="rounded-bottom d-flex justify-content-center align-items-start pt-2 pe-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pie Chart -->
+                        <div class="col-xl-5 col-lg-5 position-relative">
+                            <button id="swap-button"
+                                class="btn btn-primary position-absolute rounded-circle justify-content-center">
+                                <i id="icon" class='fa fa-table'></i>
+                            </button>
+                            <div id="wrapper-data-table" class="position-relative">
+                                <div id="wrapper-child" class="w-100 position-absolute overflow-hidden">
+                                    <div id="slider" class="card shadow mb-4">
+                                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                            <h6 class="headline pt-2 font-weight-bold text-primary">Data table</h6>
+                                        </div>
+                                        <table id="data-table" class="text-center rounded-5 d-table-cell w-100"></table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow mb-4">
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="headline pt-2 font-weight-bold text-primary">Description</h6>
+                                </div>
+                                <div id="timer">
+                                    <div id="percent"></div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-pie pt-1 pb-1">
+                                        <div class="chartjs-size-monitor">
+                                            <div id="contentWrapper"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow mb-4">
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="headline pt-2 font-weight-bold text-primary">Algorithm</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-pie pt-1 pb-1">
+                                        <div id="codetrace" class="p-3">
+                                            <p class="code-line py-1" id="code1">
+                                                For &#40;i=0; i&#60;NumberOfElement; i++&#41;
+                                            </p>
+                                            <p class="code-line py-1" id="code2">
+                                                &nbsp;&nbsp;&nbsp;For &#40;j=0; j&#60;=NumberOfElement; j++&#41;
+                                            </p> 
+                                            <p class="code-line py-1" id="code3">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If&#40;A[j] > A[j+1]&#41;
+                                            </p>
+                                            <p class="code-line py-1" id="code4">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Swap(A[j], A[j+1])
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+        </div>
+    </main>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="./js/sorting.js"></script>
+    <!--Counter up Library
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    -->
+</body>
+
+</html>

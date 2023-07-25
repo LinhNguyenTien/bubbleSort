@@ -1,0 +1,289 @@
+#getNumber{
+    width: 60%;
+    height: 40%;
+}
+
+#getString{
+    width: 60%;
+    height: 40%;
+}
+
+.btn-submit{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-bottom: 4px;
+}
+
+#board{
+    padding-left: 30px;
+    height: 29rem;    /*21.8*/
+    align-items: center;
+    background-image: url(../images/black_whale.gif);
+    background-repeat: no-repeat;
+    object-fit:contain;
+    background-size: 100%;
+}
+
+.col1 {
+    animation: start;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+#timer{
+    width: 100%;
+    height: 6px;
+}
+
+#percent{
+    height: 6px;
+    margin: 0px;
+    padding: 0px;
+    width: 0px;
+    background-color: #3b74ed;
+}
+
+#codetrace{
+    height: 15rem;
+}
+
+.codetrace p {
+    font-weight: 100;
+    margin-bottom: 5px;
+    height: 14.2rem;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+#contentWrapper{
+    height: 2.5rem;
+}
+
+#bg-sc{
+    background-color: rgb(118, 193, 156);
+}
+
+.headline{
+    height: 1.9rem;
+}
+
+#data-table{
+    width: 27.5rem;
+    height: 29rem;
+    padding: .5rem;
+}
+
+#data-table tr td{
+    width: 36px;
+    border: 1px solid black;
+    padding: 0px 2.5px;
+}
+
+#wrapper-data-table{
+    z-index: 2;
+}
+
+#slider{
+    transform: translateX(110%);
+}
+ 
+#swap-button{
+    z-index: 3;
+    top: 1.1rem;
+    right: 1.5rem;
+}
+
+/*CSS for bubble*/
+.bubble {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 5px #FFD6FF;
+    animation: UpAndDown 5s ease-in-out infinite;
+    z-index: 10;
+}
+
+.bubble p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFD6FF ;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: .5rem !important;
+}
+
+@keyframes UpAndDown{
+    0%, 100%{
+        transform: translateY(-4px);
+    }
+
+    50%{
+        transform: translateY(4px);
+    }
+}
+
+.bubble::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 9px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #c9c5c5;
+    z-index: 10;
+    filter: blur(2px);
+}
+
+/* .bubble::after {
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: 85px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 10;
+    filter: blur(2px);
+} */
+
+.bubble span { 
+    position: absolute;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.bubble span:nth-child(1){
+    inset: 2px;
+    border-left: 3px solid #0fb4ff;
+    filter: blur(8px);
+}
+
+.bubble span:nth-child(2){
+    inset: 2px;
+    border-right: 3px solid #ff4484;
+    filter: blur(8px);
+}
+
+.bubble span:nth-child(3){
+    inset: 4px;
+    border-top: 3px solid #ffeb3b;
+    filter: blur(8px);
+}
+
+.bubble span:nth-child(4){
+    inset: 6px;
+    border-left: 3px solid #ff4484;
+    filter: blur(12px);
+}
+
+.bubble span:nth-child(4){
+    inset: 6px;
+    border-left: 3px solid #ff4484;
+    filter: blur(12px);
+}
+
+.bubble span:nth-child(5){
+    inset: 2px;
+    border-bottom: 2px solid #fff;
+    filter: blur(8px);
+    transform: rotate(330deg);
+}
+
+.section{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    overflow: hidden;
+    z-index: 100;
+    bottom: 40px;
+}
+
+.section span {
+    position: absolute;
+    background: transparent;
+    bottom: 50px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow:  inset 0 0 10px rgba(255,255,255, 0.5);
+    animation: minibubble 4s linear infinite;
+}
+
+@keyframes minibubble {
+    0%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    99%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(-1200%);
+    }
+}
+
+
+.section span::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.25) translate(-70%, -70%);
+    background: radial-gradient(#fff, transparent);
+    border-radius: 50%;
+}
+
+#question {
+    width: 60px;
+    height: 60px;
+    color: white;
+    border: 5px solid rgb(239, 239, 45);
+    background-color: #3b74ed;
+    border-radius: 50%;
+}
+
+#help {
+    font-size: 20px;
+}
+
+#question:hover i {
+    transform: rotateY(360deg);
+    transition: 1s transform;
+}
+
+.title:hover {
+    font-size: 20px;
+    color: #00cc99;
+}
+
+#tutorial {
+    position: fixed;
+    top: 82%; 
+    right: 0%; 
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    #board {
+        height: 17rem;
+    }
+
+    #data-table {
+        width: 22.8rem;
+    }
+
+    .question2img {
+        width: 300px;
+        height: 200px;
+    }
+
+    #tutorial {
+        top: 85%; 
+        right: 7%; 
+        z-index: 10;
+    }
+  }
